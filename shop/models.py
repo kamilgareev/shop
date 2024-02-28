@@ -4,7 +4,8 @@ from django.urls import reverse
 
 class Item(models.Model):
     image = models.ImageField(upload_to='products/%Y/%m/%d',
-                              blank=True)
+                              blank=True,
+                              null=True)
     name = models.CharField(max_length=30,
                             blank=False)
     description = models.TextField(blank=True)
