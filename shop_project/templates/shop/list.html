@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Товары
+{% endblock %}
+
+{% block content %}
+<div id="sidebar">
+</div>
+<div id="main" class="product-list">
+    {% for product in products %}
+    <div class="item">
+        <a href="{{ product.get_absolute_url }}">
+            <img src="{{ product.image.url }}">
+        </a>
+        <a href="{{ product.get_absolute_url }}">{{ product.name }}</a>
+        <br>
+        ₽{{ product.price }}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
