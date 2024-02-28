@@ -19,7 +19,7 @@
         <tr class='row{% cycle "1" "2" %}'>
             <td>
                 <a href="{{ product.get_absolute_url }}">
-                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.jpg' %}{% endif %}">
+                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'no_image.jpg' %}{% endif %}">
                 </a>
             </td>
             <td>{{ item.product.name }}</td>
